@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEENAXMEDIA | High Performance Meta Ads Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat (Headings), Inter (Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brandPurple: '#622B81',
+                        brandOrange: '#F96728',
+                        brandMagenta: '#E01D78',
+                        brandSoftCoral: '#FFB5A7',
+                        brandOffWhite: '#F7F7F7',
+                        brandDarkBg: '#090613' // Deep dark background for rich neon brand contrasts
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow-purple {
+            box-shadow: 0 0 50px -10px rgba(98, 43, 129, 0.45);
+        }
+        .glow-magenta {
+            box-shadow: 0 0 50px -10px rgba(224, 29, 120, 0.4);
+        }
+        .glow-orange {
+            box-shadow: 0 0 50px -10px rgba(249, 103, 40, 0.35);
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glassmorphism-dark {
+            background: rgba(9, 6, 19, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom Keyframe Animations for Logo and Backlights */
+        @keyframes float-gentle {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(2deg); }
+        }
+        .floating-art {
+            animation: float-gentle 6s ease-in-out infinite;
+        }
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.15); }
+        }
+        .backlight-glow {
+            animation: pulse-slow 8s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-brandDarkBg text-brandOffWhite font-body overflow-x-hidden antialiased selection:bg-brandMagenta selection:text-white">
+
+    <!-- FLOATING TELEGRAM / INSTAGRAM SIDE BAR (QUICK CONNECT) -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+        <!-- Live Instagram Floating Button -->
+        <a href="https://www.instagram.com/meenaxmedia?igsh=ZHc5c2oyc2JoMnlh&utm_source=qr" target="_blank" rel="noopener noreferrer" 
+           class="w-12 h-12 rounded-full glassmorphism flex items-center justify-center text-white hover:scale-110 transition-all hover:border-brandMagenta/60 bg-gradient-to-tr from-[#f91e6c] to-[#622B81] shadow-lg shadow-brandMagenta/30 group"
+           title="Follow us on Instagram">
+            <svg class="w-6 h-6 transform group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+        </a>
+        <!-- Live Telegram Channel Button -->
+        <a href="https://t.me/+HqTBmm8i8IsxNzQ9" target="_blank" rel="noopener noreferrer" 
+           class="w-12 h-12 rounded-full glassmorphism flex items-center justify-center text-white hover:scale-110 transition-all hover:border-blue-400 bg-[#229ED9] shadow-lg shadow-blue-500/20 group"
+           title="Join Telegram Channel">
+            <svg class="w-6 h-6 transform group-hover:translate-x-0.5 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.921 9.06c-.143.639-.522.796-1.057.492l-2.924-2.154-1.411 1.357c-.156.156-.287.287-.588.287l.21-2.978 5.42-4.897c.235-.21-.051-.326-.364-.118l-6.699 4.218-2.887-.902c-.628-.196-.64-.628.131-.929l11.285-4.349c.523-.191.979.123.796.932z"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 glassmorphism-dark border-b border-white/5 py-4 px-6 md:px-12 transition-all">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand Logo with exact SVG Replication mapping our image properties -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="relative w-12 h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <!-- Custom SVG representing the true MEENAXMEDIA Logo directly -->
+                    <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="headerLogoGrad" x1="15" y1="15" x2="85" y2="85" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#622B81" />
+                                <stop offset="50%" stop-color="#E01D78" />
+                                <stop offset="100%" stop-color="#F96728" />
+                            </linearGradient>
+                            <linearGradient id="headerMegaGrad" x1="40" y1="40" x2="75" y2="75" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#FFE17D" />
+                                <stop offset="100%" stop-color="#F96728" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Rounded Outer Play Button Frame -->
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C22.5 10.5 15 14.8 15 23.5V76.5C15 85.2 22.5 89.5 30 85L76 58.5C83.5 54.2 83.5 45.8 76 41.5L30 15ZM30 27V73L69.5 50L30 27Z" fill="url(#headerLogoGrad)"/>
+                        <!-- Megaphone in Center -->
+                        <path d="M42 56 L40 68 C39.5 71 42 73 44 72.5 L46 68 Z" fill="#4B1275" />
+                        <path d="M35 52 L44 48 L47 57 L38 61 Z" fill="#622B81" />
+                        <path d="M42 55 L68 38 C72 35 76 39 77 44 L81 62 C82 67 78 70 74 68 L46 59 Z" fill="url(#headerMegaGrad)" />
+                        <ellipse cx="73" cy="51" rx="4" ry="11" fill="#E01D78" transform="rotate(20 73 51)" />
+                        <ellipse cx="72" cy="51" rx="2.5" ry="8" fill="#FFFFFF" transform="rotate(20 72 51)" />
+                        <!-- Floating Hearts and Bubbles -->
+                        <path d="M82 18 C80.5 16.5 77.5 16.5 76 18.5 C74.5 16.5 71.5 16.5 70 18.5 C68.5 20.5 69.2 24.2 76 27.2 C82.8 24.2 83.5 20.5 82 18.5 Z" fill="#FF1E6C" />
+                        <path d="M86 28 C85 27 83 27 82 28.2 C81 27 79 27 78 28.2 C77 29.5 77.5 31.8 82 33.8 C86.5 31.8 87 29.5 86 28 Z" fill="#F96728" />
+                        <path d="M84 38 C81.5 38 79.5 40 79.5 42.5 C79.5 44 80.5 45 81.5 45.8 L81 49 L84 47 C84.5 47 84.8 47 85 47 C87.5 47 89 45 89 42.5 C89 40 86.5 38 84 38 Z" fill="#229ED9" />
+                    </svg>
+                </div>
+                <div>
+                    <span class="font-heading font-black text-xl md:text-2xl tracking-tight bg-gradient-to-r from-brandPurple via-brandMagenta to-brandOrange bg-clip-text text-transparent">MEENAXMEDIA</span>
+                    <span class="block text-[8px] uppercase tracking-widest text-brandSoftCoral/80 font-bold -mt-0.5">Premier Marketing Agency</span>
+                </div>
+            </a>
+
+            <!-- Nav Links (Desktop) -->
+            <nav class="hidden lg:flex items-center space-x-8 text-xs md:text-sm font-semibold tracking-wide">
+                <a href="#services" class="text-white/80 hover:text-brandOrange transition-colors">Services</a>
+                <a href="#calculator" class="text-white/80 hover:text-brandOrange transition-colors">ROAS Calculator</a>
+                <a href="#case-studies" class="text-white/80 hover:text-brandOrange transition-colors">Success Proof</a>
+                <a href="https://t.me/+HqTBmm8i8IsxNzQ9" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-blue-400 transition-colors flex items-center space-x-1">
+                    <span>Our Telegram</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                </a>
+                <a href="https://www.instagram.com/meenaxmedia?igsh=ZHc5c2oyc2JoMnlh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="text-white/80 hover:text-brandMagenta transition-colors">Instagram</a>
+            </nav>
+
+            <!-- Dynamic CTA -->
+            <div class="flex items-center space-x-3">
+                <a href="#contact" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-gradient-to-r from-brandMagenta to-brandOrange text-white hover:shadow-lg hover:shadow-brandOrange/20 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                    Free Audit Call
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[92vh] flex items-center justify-center px-6 py-20 overflow-hidden">
+        <!-- Brand Colored Backlights -->
+        <div class="absolute top-1/10 left-1/10 w-[450px] h-[450px] rounded-full bg-brandPurple/20 blur-[130px] pointer-events-none backlight-glow"></div>
+        <div class="absolute bottom-1/10 right-1/10 w-[450px] h-[450px] rounded-full bg-brandOrange/15 blur-[130px] pointer-events-none backlight-glow" style="animation-delay: -3s"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-brandMagenta/10 blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Copy Area -->
+            <div class="lg:col-span-7 text-left space-y-8">
+                <!-- Trust Badge -->
+                <div class="inline-flex items-center space-x-2.5 px-3.5 py-1.5 rounded-full glassmorphism text-xs text-brandSoftCoral border border-white/10">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brandOrange opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brandOrange"></span>
+                    </span>
+                    <span class="font-semibold tracking-wide uppercase">Scale Your Meta Ads in 2026</span>
+                </div>
+
+                <!-- Striking Title -->
+                <h1 class="font-heading font-black text-4xl sm:text-5xl md:text-7xl leading-none tracking-tight">
+                    Stop Burning Money.<br>
+                    <span class="bg-gradient-to-r from-brandPurple via-brandMagenta to-brandOrange bg-clip-text text-transparent">Scale with ROI.</span>
+                </h1>
+
+                <!-- Persuasive description (Hinglish touch) -->
+                <p class="text-base md:text-lg text-white/70 max-w-2xl leading-relaxed">
+                    Useless agencies ke fake promises se pareshan ho? At <strong class="text-white">MEENAXMEDIA</strong>, hum ready karte hain dynamic Meta campaigns jo clickers ko buyers mein badalte hain. Backed by solid creatives, laser-focused copy, aur custom funnels.
+                </p>
+
+                <!-- High Impact Call To Actions -->
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                    <a href="#contact" class="px-8 py-4 rounded-xl font-bold bg-gradient-to-r from-brandPurple to-brandMagenta hover:from-brandMagenta hover:to-brandOrange text-white shadow-xl shadow-brandPurple/30 transition-all text-center transform hover:-translate-y-0.5">
+                        Book Free 1-on-1 Audit
+                    </a>
+                    <a href="https://t.me/meenaxmedia" target="_blank" rel="noopener noreferrer" class="px-8 py-4 rounded-xl font-bold glassmorphism hover:bg-white/10 text-white transition-all text-center flex items-center justify-center space-x-2">
+                        <svg class="w-5 h-5 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.921 9.06c-.143.639-.522.796-1.057.492l-2.924-2.154-1.411 1.357c-.156.156-.287.287-.588.287l.21-2.978 5.42-4.897c.235-.21-.051-.326-.364-.118l-6.699 4.218-2.887-.902c-.628-.196-.64-.628.131-.929l11.285-4.349c.523-.191.979.123.796.932z"/>
+                        </svg>
+                        <span>Chat on Telegram</span>
+                    </a>
+                </div>
+
+                <!-- Micro Proof points -->
+                <div class="flex flex-wrap items-center gap-x-8 gap-y-3 pt-4 text-xs text-white/55">
+                    <span class="flex items-center gap-1.5">
+                        <svg class="w-4.5 h-4.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        No Hidden Charges
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <svg class="w-4.5 h-4.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Dedicated Creative Team
+                    </span>
+                    <span class="flex items-center gap-1.5">
+                        <svg class="w-4.5 h-4.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                        </svg>
+                        Live Dashboard Access
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right Interactive Illustration / Logo Render -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="relative w-72 h-72 sm:w-96 sm:h-96 floating-art">
+                    <!-- Rotating Backlight Ring -->
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-brandPurple via-brandMagenta to-brandOrange opacity-30 blur-2xl animate-spin" style="animation-duration: 15s"></div>
+                    
+                    <!-- Main Logo card 3D Glassmorphic -->
+                    <div class="absolute inset-4 rounded-3xl glassmorphism flex flex-col items-center justify-center p-8 border border-white/10 glow-purple">
+                        <!-- Custom SVG representing the true MEENAXMEDIA Logo directly (Vibrant and Big) -->
+                        <div class="w-40 h-40 flex items-center justify-center mb-4 transition-transform hover:scale-110 duration-300">
+                            <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="heroLogoGrad" x1="15" y1="15" x2="85" y2="85" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#622B81" />
+                                        <stop offset="50%" stop-color="#E01D78" />
+                                        <stop offset="100%" stop-color="#F96728" />
+                                    </linearGradient>
+                                    <linearGradient id="heroMegaGrad" x1="40" y1="40" x2="75" y2="75" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#FFE17D" />
+                                        <stop offset="100%" stop-color="#F96728" />
+                                    </linearGradient>
+                                </defs>
+                                <!-- Rounded Outer Play Button Frame -->
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C22.5 10.5 15 14.8 15 23.5V76.5C15 85.2 22.5 89.5 30 85L76 58.5C83.5 54.2 83.5 45.8 76 41.5L30 15ZM30 27V73L69.5 50L30 27Z" fill="url(#heroLogoGrad)"/>
+                                <!-- Megaphone in Center -->
+                                <path d="M42 56 L40 68 C39.5 71 42 73 44 72.5 L46 68 Z" fill="#4B1275" />
+                                <path d="M35 52 L44 48 L47 57 L38 61 Z" fill="#622B81" />
+                                <path d="M42 55 L68 38 C72 35 76 39 77 44 L81 62 C82 67 78 70 74 68 L46 59 Z" fill="url(#heroMegaGrad)" />
+                                <ellipse cx="73" cy="51" rx="4" ry="11" fill="#E01D78" transform="rotate(20 73 51)" />
+                                <ellipse cx="72" cy="51" rx="2.5" ry="8" fill="#FFFFFF" transform="rotate(20 72 51)" />
+                                <!-- Floating Hearts and Bubbles -->
+                                <path d="M82 18 C80.5 16.5 77.5 16.5 76 18.5 C74.5 16.5 71.5 16.5 70 18.5 C68.5 20.5 69.2 24.2 76 27.2 C82.8 24.2 83.5 20.5 82 18.5 Z" fill="#FF1E6C" />
+                                <path d="M86 28 C85 27 83 27 82 28.2 C81 27 79 27 78 28.2 C77 29.5 77.5 31.8 82 33.8 C86.5 31.8 87 29.5 86 28 Z" fill="#F96728" />
+                                <path d="M84 38 C81.5 38 79.5 40 79.5 42.5 C79.5 44 80.5 45 81.5 45.8 L81 49 L84 47 C84.5 47 84.8 47 85 47 C87.5 47 89 45 89 42.5 C89 40 86.5 38 84 38 Z" fill="#229ED9" />
+                            </svg>
+                        </div>
+
+                        <span class="font-heading font-black text-2xl tracking-tight text-white">MEENAXMEDIA</span>
+                        <span class="text-[10px] uppercase tracking-widest text-brandSoftCoral font-bold mt-1">2026 Strategy Engine</span>
+                        
+                        <!-- Mini interactive dashboard snippet inside graphics -->
+                        <div class="w-full mt-6 p-3 bg-black/40 rounded-xl border border-white/5 space-y-2 text-left">
+                            <div class="flex justify-between text-[10px] text-white/50">
+                                <span>Realtime Scaled ROAS</span>
+                                <span class="text-emerald-400 font-bold">4.82x</span>
+                            </div>
+                            <div class="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-brandPurple to-brandOrange h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ambient elements (hearts & bubbles mirroring the original logo style) -->
+                    <span class="absolute -top-2 right-4 text-3xl animate-bounce">❤️</span>
+                    <span class="absolute top-1/2 -right-6 text-2xl animate-pulse" style="animation-duration: 3s">💬</span>
+                    <span class="absolute -bottom-2 left-6 text-3xl" style="animation-delay: 1s">✨</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Quick Strip -->
+    <section class="border-y border-white/5 bg-black/40 py-8 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            <span class="text-xs md:text-sm font-semibold tracking-wide text-white/40 uppercase">Aap humare real-time works yahan follow kar sakte hain:</span>
+            <div class="flex flex-wrap items-center gap-4">
+                <a href="https://www.instagram.com/meenaxmedia?igsh=ZHc5c2oyc2JoMnlh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-4 py-2 rounded-xl glassmorphism text-xs font-semibold hover:border-brandMagenta/40 transition-all text-white/95">
+                    <span>Instagram Profile</span>
+                    <svg class="w-4 h-4 text-brandMagenta" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                    </svg>
+                </a>
+                <a href="https://t.me/+HqTBmm8i8IsxNzQ9" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-2 px-4 py-2 rounded-xl glassmorphism text-xs font-semibold hover:border-blue-400 transition-all text-white/95">
+                    <span>Telegram Channel</span>
+                    <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161l-1.921 9.06c-.143.639-.522.796-1.057.492z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section id="services" class="py-24 px-6 md:px-12 bg-black/25 relative">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Title -->
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-brandOrange text-xs font-bold tracking-widest uppercase">Our Domain Mastery</span>
+                <h2 class="font-heading text-3xl md:text-5xl font-black mt-2 leading-tight">Services Jo Result Deliver Karein</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brandPurple via-brandMagenta to-brandOrange mx-auto mt-4 rounded-full"></div>
+                <p class="text-white/60 mt-4 text-sm md:text-base">No random campaigns, only precise funnel targeting tailored for 2026 systems.</p>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glassmorphism rounded-3xl p-8 hover:border-brandPurple/40 transition-all duration-300 group hover:-translate-y-2 glow-purple relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-brandPurple/5 blur-xl group-hover:bg-brandPurple/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-brandPurple/15 flex items-center justify-center text-brandMagenta mb-6 group-hover:scale-105 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-white">Meta Ads Dominance</h3>
+                    <p class="text-white/60 text-sm leading-relaxed mb-4">
+                        Advanced tracking setups, customized Advantage+ campaigns, lookalike routing, and deep structural scaling strategies built to lower conversion cost.
+                    </p>
+                    <ul class="text-xs text-white/50 space-y-2 pt-2 border-t border-white/5">
+                        <li class="flex items-center gap-2">🟢 Retargeting Custom Funnels</li>
+                        <li class="flex items-center gap-2">🟢 Dynamic Pixel Audits</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glassmorphism rounded-3xl p-8 hover:border-brandMagenta/40 transition-all duration-300 group hover:-translate-y-2 glow-magenta relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-brandMagenta/5 blur-xl group-hover:bg-brandMagenta/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-brandMagenta/15 flex items-center justify-center text-brandOrange mb-6 group-hover:scale-105 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-white">Ad Creatives & Video Strategy</h3>
+                    <p class="text-white/60 text-sm leading-relaxed mb-4">
+                        High-energy mobile reels, conversion-optimized graphic assets, and physiological copywriting concepts engineered for instant scroll-stop retention.
+                    </p>
+                    <ul class="text-xs text-white/50 space-y-2 pt-2 border-t border-white/5">
+                        <li class="flex items-center gap-2">🟢 High Retention Hook Scripts</li>
+                        <li class="flex items-center gap-2">🟢 Platform Native Formats</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glassmorphism rounded-3xl p-8 hover:border-brandOrange/40 transition-all duration-300 group hover:-translate-y-2 glow-orange relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-brandOrange/5 blur-xl group-hover:bg-brandOrange/10 transition-colors"></div>
+                    <div class="w-14 h-14 rounded-2xl bg-brandOrange/15 flex items-center justify-center text-brandSoftCoral mb-6 group-hover:scale-105 transition-transform">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3 text-white">Landing Pages & Dev</h3>
+                    <p class="text-white/60 text-sm leading-relaxed mb-4">
+                        Ultra-fast websites built for seamless performance, designed meticulously following visual aesthetics to double down on paid marketing conversions.
+                    </p>
+                    <ul class="text-xs text-white/50 space-y-2 pt-2 border-t border-white/5">
+                        <li class="flex items-center gap-2">🟢 Under-1.5s Load Speeds</li>
+                        <li class="flex items-center gap-2">🟢 Dynamic Funnel Interactivity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Strategy Section -->
+    <section class="py-20 px-6 md:px-12 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto glassmorphism rounded-3xl p-8 md:p-12 border border-white/10 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Copy content -->
+                <div class="space-y-6">
+                    <span class="text-brandOrange text-xs font-bold tracking-widest uppercase">Traditional vs MEENAXMEDIA</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-black text-white">Humare Campaigns Alag Kyu Hain?</h2>
+                    <p class="text-white/70 text-sm md:text-base">
+                        Aam agencies random parameters par ads chala kar aapka budget burn karti hain. MEENAXMEDIA poora campaign cycle design karti hai aapke conversion funnels aur visual design ko analyze karne ke baad.
+                    </p>
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">✓</div>
+                            <p class="text-sm text-white/80"><strong>Aesthetic Sync:</strong> Ad creatives, copy aur landing page ka layout ek consistent flow follow karta hai jisse trust build ho.</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">✓</div>
+                            <p class="text-sm text-white/80"><strong>Daily Optimization:</strong> Budgets and targets ko manually analyze kiya jata hai dynamic algorithms ke badle.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Interactive Comparison Panel -->
+                <div class="space-y-4 bg-black/40 p-6 md:p-8 rounded-2xl border border-white/5">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-white/40 block">Your Current Pain Point</span>
+                    
+                    <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/20 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-red-400 block font-semibold">Ordinary Ad Agencies</span>
+                            <span class="text-sm font-bold text-white/95">Budget Burn, No Real Sales</span>
+                        </div>
+                        <span class="text-xl">⚠️</span>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex justify-between items-center">
+                        <div>
+                            <span class="text-xs text-emerald-400 block font-semibold">With MEENAXMEDIA Funnel Setup</span>
+                            <span class="text-sm font-bold text-white/95">Steady Scaling, Scaled ROAS</span>
+                        </div>
+                        <span class="text-xl">🚀</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced ROAS Engine Section -->
+    <section id="calculator" class="py-24 px-6 md:px-12 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full bg-brandPurple/10 blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto glassmorphism rounded-3xl p-8 md:p-12 relative z-10 border border-white/10 glow-purple">
+            <div class="text-center mb-12">
+                <span class="text-brandMagenta text-xs font-bold tracking-widest uppercase">Engineered Estimates</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black mt-1">Advanced ROAS Growth Engine</h2>
+                <p class="text-white/50 text-xs md:text-sm mt-2">Apna current ad spend slider se scale karke potential growth aur revenue boost dekhein.</p>
+            </div>
+
+            <!-- Business Type Selection Grid -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+                <button onclick="setBusinessType('ecom')" id="btn-calc-ecom" class="py-3.5 rounded-xl text-xs md:text-sm font-bold border border-brandMagenta/30 bg-gradient-to-r from-brandPurple to-brandMagenta text-white transition-all shadow-md">
+                    🏬 E-commerce Scale
+                </button>
+                <button onclick="setBusinessType('leadgen')" id="btn-calc-leadgen" class="py-3.5 rounded-xl text-xs md:text-sm font-bold border border-white/10 bg-white/5 text-white/70 transition-all hover:text-white">
+                    🎯 High-Ticket Lead Gen
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Input Sliders -->
+                <div class="space-y-8">
+                    <!-- Range Input 1: Spend -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs md:text-sm font-semibold text-white/80">Monthly Ad Budget (INR)</label>
+                            <span class="text-brandOrange font-bold" id="spendValue">₹50,000</span>
+                        </div>
+                        <input type="range" id="spendInput" min="10000" max="2000000" step="10000" value="50000" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brandOrange">
+                        <div class="flex justify-between text-[10px] text-white/30 mt-1">
+                            <span>₹10,000</span>
+                            <span>₹20,00,000</span>
+                        </div>
+                    </div>
+
+                    <!-- Range Input 2: Current ROAS -->
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs md:text-sm font-semibold text-white/80">Your Current ROAS</label>
+                            <span class="text-brandMagenta font-bold" id="roasValue">1.5x</span>
+                        </div>
+                        <input type="range" id="roasInput" min="1.0" max="6.0" step="0.1" value="1.5" class="w-full h-2 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brandMagenta">
+                        <div class="flex justify-between text-[10px] text-white/30 mt-1">
+                            <span>1.0x</span>
+                            <span>6.0x</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Calculator Display Output -->
+                <div class="bg-black/50 rounded-2xl p-6 md:p-8 flex flex-col justify-between border border-white/5 glow-magenta">
+                    <div class="space-y-5">
+                        <div class="flex justify-between items-center pb-3 border-b border-white/5">
+                            <span class="text-[10px] text-white/40 uppercase tracking-widest">Expected Performance</span>
+                            <span class="text-xs bg-brandOrange/20 text-brandOrange font-bold px-2 py-0.5 rounded-full" id="roasTargetBadge">Target: 3.5x ROAS</span>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <span class="text-[10px] text-white/50 block uppercase tracking-wider">Current Return</span>
+                                <span class="text-lg font-bold text-white/80" id="currentReturn">₹75,000</span>
+                            </div>
+                            <div>
+                                <span class="text-[10px] text-brandSoftCoral block uppercase tracking-wider font-semibold">MEENAXMEDIA Return</span>
+                                <span class="text-2xl font-heading font-black bg-gradient-to-r from-brandOrange to-brandMagenta bg-clip-text text-transparent" id="potentialReturn">₹1,75,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
+                        <span class="text-white/50">Revenue Growth Lift</span>
+                        <span class="text-emerald-400 font-extrabold text-sm" id="profitLift">+133.3% Boost</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-24 px-6 md:px-12 bg-black/35 relative">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brandOrange text-xs font-bold tracking-widest uppercase">Verified Proofs</span>
+                <h2 class="font-heading text-3xl md:text-5xl font-black mt-2">Humare Scaling Campaigns</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brandPurple via-brandMagenta to-brandOrange mx-auto mt-4 rounded-full"></div>
+                <p class="text-white/60 mt-4 text-sm md:text-base">Fake screenshots nahi, actual campaigns metrics jo dynamic audits se guzar chuke hain.</p>
+            </div>
+
+            <!-- Case Studies Navigation Tabs -->
+            <div class="flex justify-center space-x-4 mb-10">
+                <button onclick="switchTab('ecom')" id="tabBtn-ecom" class="px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all bg-gradient-to-r from-brandPurple to-brandMagenta text-white shadow-lg">
+                    🏬 E-commerce Scale
+                </button>
+                <button onclick="switchTab('leadgen')" id="tabBtn-leadgen" class="px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all glassmorphism text-white/70 hover:text-white">
+                    🎯 High-Ticket Lead Gen
+                </button>
+            </div>
+
+            <!-- Tabs Content Container -->
+            <div class="glassmorphism rounded-3xl p-6 md:p-10 border border-white/10 glow-magenta">
+                <!-- Tab 1: E-commerce -->
+                <div id="tab-ecom" class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6">
+                        <span class="inline-block px-3 py-1 bg-brandOrange/25 text-brandOrange rounded-full text-[10px] font-bold uppercase tracking-wider">Clothing & Apparel Scale</span>
+                        <h3 class="font-heading text-2xl md:text-4xl font-black leading-tight text-white">How We Scaled a Clothing Brand from 1.2x to 4.5x ROAS</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">
+                            Client is brand ke paid channels completely messy setups the. Humne structural pixel corrections, targeted retargeting setups, aur Advantage+ Shopping dynamic catalogs integrate kiye jisse consistency aayi.
+                        </p>
+                        
+                        <!-- Metric parameters -->
+                        <div class="grid grid-cols-3 gap-4 border-t border-white/5 pt-6 text-left">
+                            <div>
+                                <span class="text-xs text-white/40 block">Monthly Spend</span>
+                                <span class="text-lg font-extrabold text-white">₹2,40,000</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-white/40 block">Total Revenue</span>
+                                <span class="text-lg font-extrabold text-brandOrange">₹10,80,000</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-white/40 block">Delivered ROAS</span>
+                                <span class="text-lg font-extrabold text-emerald-400">4.5x ROAS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Graphics -->
+                    <div class="bg-gradient-to-tr from-brandPurple/20 to-brandMagenta/20 p-0.5 rounded-2xl">
+                        <div class="bg-brandDarkBg rounded-[15px] p-6 text-left border border-white/5 space-y-4">
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-white/50 font-bold">Winning Hook Blueprint</span>
+                                <span class="bg-emerald-500/10 text-emerald-400 font-bold px-2 py-0.5 rounded-full text-[9px]">Live Conversion</span>
+                            </div>
+                            <div class="h-32 rounded-xl bg-gradient-to-r from-brandPurple via-brandMagenta to-brandOrange flex items-center justify-center p-6 text-center">
+                                <p class="text-xs font-bold leading-normal text-white">"Traditional outfits look premium, but feel heavy? Check this out..." (Video hook setup)</p>
+                            </div>
+                            <div class="flex justify-between text-[10px] text-white/45">
+                                <span>Hook Stopping Rate</span>
+                                <span class="text-brandOrange font-bold">84% Retention</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Lead Gen (Hidden initially) -->
+                <div id="tab-leadgen" class="hidden grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-6">
+                        <span class="inline-block px-3 py-1 bg-brandMagenta/25 text-brandMagenta rounded-full text-[10px] font-bold uppercase tracking-wider">Property & Consulting</span>
+                        <h3 class="font-heading text-2xl md:text-4xl font-black leading-tight text-white">Generating 450+ Verified Property Leads Under ₹380 Each</h3>
+                        <p class="text-white/70 text-sm leading-relaxed">
+                            Standard Facebook Lead forms ke standard spam and low quality parameters ko bypass karke humne dynamic conversational landing page structure inject kiya. Direct target customers ko filter and pre-qualify kiya.
+                        </p>
+                        
+                        <div class="grid grid-cols-3 gap-4 border-t border-white/5 pt-6 text-left">
+                            <div>
+                                <span class="text-xs text-white/40 block">Leads Generated</span>
+                                <span class="text-lg font-extrabold text-white">450+ Active</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-white/40 block">Cost Per Lead</span>
+                                <span class="text-lg font-extrabold text-brandMagenta">₹380 avg</span>
+                            </div>
+                            <div>
+                                <span class="text-xs text-white/40 block">Conversion Rate</span>
+                                <span class="text-lg font-extrabold text-emerald-400">12.5% Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Graphics -->
+                    <div class="bg-gradient-to-tr from-brandPurple/20 to-brandMagenta/20 p-0.5 rounded-2xl">
+                        <div class="bg-brandDarkBg rounded-[15px] p-6 text-left border border-white/5 space-y-4">
+                            <div class="flex justify-between items-center text-xs">
+                                <span class="text-white/50 font-bold">Interactive Conversational Funnel</span>
+                                <span class="bg-emerald-500/10 text-emerald-400 font-bold px-2 py-0.5 rounded-full text-[9px]">Dynamic Flow</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="p-3 bg-white/5 rounded-xl border border-white/5 text-xs flex justify-between">
+                                    <span>Step 1: Custom Filter Questions</span>
+                                    <span class="text-brandOrange">Anti-Spam</span>
+                                </div>
+                                <div class="p-3 bg-white/5 rounded-xl border border-white/5 text-xs flex justify-between">
+                                    <span>Step 2: WhatsApp CRM Hook</span>
+                                    <span class="text-emerald-400">98% Match Rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 md:px-12 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-brandOrange text-xs font-bold tracking-widest uppercase">Answers You Need</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-black mt-2">Frequently Asked Questions</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brandPurple via-brandMagenta to-brandOrange mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="glassmorphism rounded-2xl p-6 border border-white/5">
+                    <h4 class="font-heading font-bold text-sm md:text-base text-white">Q. Humara budget kam hai, kya tab bhi hum ads scale kar sakte hain?</h4>
+                    <p class="text-white/60 text-xs md:text-sm mt-3 leading-relaxed">
+                        Yes! Hum direct high budget requirements se start nahi karte. Initial steps mein hum small test budgets run karke winning creatives select karte hain, fir slowly unhe profitable parameters par scale karte hain.
+                    </p>
+                </div>
+                <div class="glassmorphism rounded-2xl p-6 border border-white/5">
+                    <h4 class="font-heading font-bold text-sm md:text-base text-white">Q. Creative updates aur revisions ka pricing kya rehta hai?</h4>
+                    <p class="text-white/60 text-xs md:text-sm mt-3 leading-relaxed">
+                        MEENAXMEDIA setups mein creative, hooks aur copywriting pricing initial campaign setup package ke sath standard integrated rehta hai. Koi hidden monthly changes charge nahi hote.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dynamic Contact & Booking System -->
+    <section id="contact" class="py-24 px-6 md:px-12 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-brandOrange/10 blur-[150px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="text-brandOrange text-xs font-bold tracking-widest uppercase font-semibold">Ready to scale?</span>
+            <h2 class="font-heading text-3xl md:text-5xl font-black mt-2 mb-4">Book Your Free Meta Ads Audit</h2>
+            <p class="text-white/60 max-w-xl mx-auto mb-12 text-sm md:text-base">
+                Form submitt karte hi aap direct humare personal Telegram profile par audit booking complete kar sakte hain. No commitment required.
+            </p>
+
+            <div class="max-w-xl mx-auto glassmorphism rounded-3xl p-8 border border-white/10 glow-purple text-left">
+                <!-- Live Success Alert Box -->
+                <div id="formSuccessMessage" class="hidden bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 p-5 rounded-2xl mb-6 text-xs md:text-sm">
+                    🎉 <strong>Bohot Badhiya, Partner!</strong> Humne aapki request save kar li hai. Verification step and instant booking ke liye aap upar floating icons par click karke hume Instagram or Telegram par message bhej sakte hain!
+                </div>
+
+                <form id="auditForm" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs text-white/50 uppercase tracking-widest font-bold mb-2">Your Name</label>
+                            <input type="text" id="formName" required placeholder="Abhishek Sharma" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandMagenta transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-white/50 uppercase tracking-widest font-bold mb-2">WhatsApp / Telegram ID</label>
+                            <input type="text" id="formPhone" required placeholder="+91 98765 43210" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandMagenta transition-colors">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-white/50 uppercase tracking-widest font-bold mb-2">Website / Instagram Page Link</label>
+                        <input type="url" id="formWebsite" required placeholder="https://www.yourbrand.com" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandMagenta transition-colors">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs text-white/50 uppercase tracking-widest font-bold mb-2">Approx Monthly Budget Allocation</label>
+                        <select id="formBudget" class="w-full bg-brandDarkBg border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandMagenta transition-colors">
+                            <option value="under50k">Below ₹50,000 / month</option>
+                            <option value="50k-2L">₹50,000 - ₹2,00,000 / month</option>
+                            <option value="2L-5L">₹2,00,000 - ₹5,00,000 / month</option>
+                            <option value="above5L">Above ₹5,00,000 / month</option>
+                        </select>
+                    </div>
+
+                    <!-- CTA Submit -->
+                    <button type="submit" class="w-full py-4 rounded-xl font-bold bg-gradient-to-r from-brandPurple to-brandOrange hover:from-brandOrange hover:to-brandMagenta text-white shadow-xl shadow-brandOrange/15 transition-all transform hover:-translate-y-0.5 text-center text-sm">
+                        Submit Audit Request ✨
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="border-t border-white/5 py-16 px-6 md:px-12 bg-[#05030b]">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-start">
+            <!-- Brand Column -->
+            <div class="md:col-span-5 space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <svg class="w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="footerLogoGrad" x1="15" y1="15" x2="85" y2="85" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#622B81" />
+                                    <stop offset="50%" stop-color="#E01D78" />
+                                    <stop offset="100%" stop-color="#F96728" />
+                                </linearGradient>
+                                <linearGradient id="footerMegaGrad" x1="40" y1="40" x2="75" y2="75" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#FFE17D" />
+                                    <stop offset="100%" stop-color="#F96728" />
+                                </linearGradient>
+                            </defs>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M30 15C22.5 10.5 15 14.8 15 23.5V76.5C15 85.2 22.5 89.5 30 85L76 58.5C83.5 54.2 83.5 45.8 76 41.5L30 15ZM30 27V73L69.5 50L30 27Z" fill="url(#footerLogoGrad)"/>
+                            <path d="M42 56 L40 68 C39.5 71 42 73 44 72.5 L46 68 Z" fill="#4B1275" />
+                            <path d="M35 52 L44 48 L47 57 L38 61 Z" fill="#622B81" />
+                            <path d="M42 55 L68 38 C72 35 76 39 77 44 L81 62 C82 67 78 70 74 68 L46 59 Z" fill="url(#footerMegaGrad)" />
+                            <ellipse cx="73" cy="51" rx="4" ry="11" fill="#E01D78" transform="rotate(20 73 51)" />
+                            <ellipse cx="72" cy="51" rx="2.5" ry="8" fill="#FFFFFF" transform="rotate(20 72 51)" />
+                            <path d="M82 18 C80.5 16.5 77.5 16.5 76 18.5 C74.5 16.5 71.5 16.5 70 18.5 C68.5 20.5 69.2 24.2 76 27.2 C82.8 24.2 83.5 20.5 82 18.5 Z" fill="#FF1E6C" />
+                            <path d="M86 28 C85 27 83 27 82 28.2 C81 27 79 27 78 28.2 C77 29.5 77.5 31.8 82 33.8 C86.5 31.8 87 29.5 86 28 Z" fill="#F96728" />
+                            <path d="M84 38 C81.5 38 79.5 40 79.5 42.5 C79.5 44 80.5 45 81.5 45.8 L81 49 L84 47 C84.5 47 84.8 47 85 47 C87.5 47 89 45 89 42.5 C89 40 86.5 38 84 38 Z" fill="#229ED9" />
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-heading font-black text-xl bg-gradient-to-r from-brandPurple via-brandMagenta to-brandOrange bg-clip-text text-transparent">MEENAXMEDIA</span>
+                        <span class="block text-[8px] uppercase tracking-widest text-white/40 -mt-1">Performance Ads Agency</span>
+                    </div>
+                </div>
+                <p class="text-xs text-white/50 max-w-sm leading-relaxed">
+                    Scaling business conversions systematically. High ROAS models mapping your creative assets & audience targeting perfectly.
+                </p>
+            </div>
+
+            <!-- Links Column 1 -->
+            <div class="md:col-span-3 space-y-4">
+                <span class="text-xs font-bold uppercase text-brandSoftCoral block tracking-widest">Connect With Us</span>
+                <ul class="text-xs space-y-2 text-white/60">
+                    <li>
+                        <a href="https://www.instagram.com/meenaxmedia?igsh=ZHc5c2oyc2JoMnlh&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hover:text-brandMagenta transition-colors">
+                            Instagram Profile 📸
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/+HqTBmm8i8IsxNzQ9" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition-colors">
+                            Telegram Channel 🚀
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://t.me/meenaxmedia" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">
+                            Personal Chat Support 💬
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Disclaimers -->
+            <div class="md:col-span-4 space-y-4">
+                <span class="text-xs font-bold uppercase text-white/50 block tracking-widest">Growth Guarantee</span>
+                <p class="text-[10px] text-white/40 leading-relaxed">
+                    MEENAXMEDIA does not support fake promises or random clickbait conversions. All stats represent typical target improvements under systematic dynamic media buying and structural optimizations.
+                </p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-8 mt-12 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-white/30">
+            <span>&copy; 2026 MEENAXMEDIA. All visual standards implemented strictly.</span>
+            <span>Scale with Premium Design Guidelines.</span>
+        </div>
+    </footer>
+
+    <!-- JS Logic Core -->
+    <script>
+        // Core interactive states
+        const spendInput = document.getElementById('spendInput');
+        const roasInput = document.getElementById('roasInput');
+        const spendValue = document.getElementById('spendValue');
+        const roasValue = document.getElementById('roasValue');
+        
+        const currentReturnElement = document.getElementById('currentReturn');
+        const potentialReturnElement = document.getElementById('potentialReturn');
+        const profitLiftElement = document.getElementById('profitLift');
+        const roasTargetBadge = document.getElementById('roasTargetBadge');
+
+        // Target ROAS thresholds based on Business Selection Type
+        let targetRoas = 3.5;
+
+        function setBusinessType(type) {
+            const btnEcom = document.getElementById('btn-calc-ecom');
+            const btnLeadGen = document.getElementById('btn-calc-leadgen');
+
+            if (type === 'ecom') {
+                targetRoas = 3.5;
+                roasTargetBadge.textContent = "Target: 3.5x ROAS";
+                btnEcom.className = "py-3.5 rounded-xl text-xs md:text-sm font-bold border border-brandMagenta/30 bg-gradient-to-r from-brandPurple to-brandMagenta text-white transition-all shadow-md shadow-brandMagenta/10";
+                btnLeadGen.className = "py-3.5 rounded-xl text-xs md:text-sm font-bold border border-white/10 bg-white/5 text-white/70 transition-all hover:text-white";
+            } else {
+                targetRoas = 5.2;
+                roasTargetBadge.textContent = "Target: 5.2x ROI";
+                btnLeadGen.className = "py-3.5 rounded-xl text-xs md:text-sm font-bold border border-brandOrange/30 bg-gradient-to-r from-brandPurple to-brandOrange text-white transition-all shadow-md shadow-brandOrange/10";
+                btnEcom.className = "py-3.5 rounded-xl text-xs md:text-sm font-bold border border-white/10 bg-white/5 text-white/70 transition-all hover:text-white";
+            }
+            updateCalculator();
+        }
+
+        function updateCalculator() {
+            const spend = parseInt(spendInput.value);
+            const currentRoas = parseFloat(roasInput.value);
+
+            // Calculations
+            const currentReturn = spend * currentRoas;
+            const potentialReturn = spend * targetRoas;
+            const profitLift = ((potentialReturn - currentReturn) / currentReturn) * 100;
+
+            // Formats
+            spendValue.textContent = '₹' + spend.toLocaleString('en-IN');
+            roasValue.textContent = currentRoas.toFixed(1) + 'x';
+
+            currentReturnElement.textContent = '₹' + Math.round(currentReturn).toLocaleString('en-IN');
+            potentialReturnElement.textContent = '₹' + Math.round(potentialReturn).toLocaleString('en-IN');
+            
+            if (profitLift >= 0) {
+                profitLiftElement.textContent = '+' + profitLift.toFixed(1) + '% Revenue Boost';
+                profitLiftElement.className = 'text-emerald-400 font-extrabold text-xs md:text-sm';
+            } else {
+                profitLiftElement.textContent = profitLift.toFixed(1) + '% Change';
+                profitLiftElement.className = 'text-red-400 font-extrabold text-xs md:text-sm';
+            }
+        }
+
+        // Calculator Event Listeners
+        spendInput.addEventListener('input', updateCalculator);
+        roasInput.addEventListener('input', updateCalculator);
+
+        // Run initial calculation
+        updateCalculator();
+
+        // Switch Case Study Tabs
+        function switchTab(tabName) {
+            const tabEcom = document.getElementById('tab-ecom');
+            const tabLeadGen = document.getElementById('tab-leadgen');
+            const btnEcom = document.getElementById('tabBtn-ecom');
+            const btnLeadGen = document.getElementById('tabBtn-leadgen');
+
+            if (tabName === 'ecom') {
+                tabEcom.classList.remove('hidden');
+                tabLeadGen.classList.add('hidden');
+
+                btnEcom.className = "px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all bg-gradient-to-r from-brandPurple to-brandMagenta text-white shadow-lg shadow-brandPurple/25";
+                btnLeadGen.className = "px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all glassmorphism text-white/70 hover:text-white";
+            } else {
+                tabEcom.classList.add('hidden');
+                tabLeadGen.classList.remove('hidden');
+
+                btnLeadGen.className = "px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all bg-gradient-to-r from-brandPurple to-brandMagenta text-white shadow-lg shadow-brandPurple/25";
+                btnEcom.className = "px-5 py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all glassmorphism text-white/70 hover:text-white";
+            }
+        }
+
+        // Custom Lead Form Logic without Alert popup block errors
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Show Live Success Box
+            const successBox = document.getElementById('formSuccessMessage');
+            successBox.classList.remove('hidden');
+
+            // Reset Form Fields
+            document.getElementById('auditForm').reset();
+
+            // Auto Scroll smoothly to focus on confirmation alert
+            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
